@@ -1,0 +1,25 @@
+version: '3.0'
+networks:
+  back:
+    internal: true
+  front:
+    internal: false
+services:
+  api:
+    depends_on:
+    - mongo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - back
+      - front
+    ports:
+      - 8080:8080
+    restart: always
+  mongo:
+    image: mongo
+    networks:
+    - back
+    ports:
+    - 27017:27017/tcp
