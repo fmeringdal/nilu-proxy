@@ -10,7 +10,7 @@ const DBConnect = async() => {
         })
         console.log("Successfully connected to MongoDB");
     } catch(e){
-        console.log("Could not connect to MongoDB at localhost:27017/nilu");
+        console.log("Could not connect to MongoDB");
         process.exit(0);
     }
 }
