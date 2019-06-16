@@ -3,7 +3,7 @@ const axios = require('axios');
 // individual lookup routes
 
 //Mongoose models
-const Store = require('../models/Store');
+const Store = require('../db/models/Store');
 
 const LOOKUP_HOST = "https://api.nilu.no";
 
